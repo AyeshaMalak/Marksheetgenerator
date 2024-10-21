@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Sheet Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mark Sheet Generator</h1>
+        <div class="form-group">
+            <label for="english">English:</label>
+            <input type="number" id="english" placeholder="Enter English marks" max="100">
+        </div>
+        <div class="form-group">
+            <label for="urdu">Urdu:</label>
+            <input type="number" id="urdu" placeholder="Enter Urdu marks" max="100">
+        </div>
+        <div class="form-group">
+            <label for="physics">Physics:</label>
+            <input type="number" id="physics" placeholder="Enter Physics marks" max="100">
+        </div>
+        <div class="form-group">
+            <label for="computer">Computer Science:</label>
+            <input type="number" id="computer" placeholder="Enter Computer Science marks" max="100">
+        </div>
+        <div class="form-group">
+            <label for="maths">Mathematics:</label>
+            <input type="number" id="maths" placeholder="Enter Mathematics marks" max="100">
+        </div>
+        <button onclick="generateMarkSheet()">Generate Mark Sheet</button>
+
+        <div id="markSheet" class="mark-sheet" style="display: none;">
+            <h2>Mark Sheet</h2>
+            <p><strong>English:</strong> <span id="engMarks"></span></p>
+            <p><strong>Urdu:</strong> <span id="urdMarks"></span></p>
+            <p><strong>Physics:</strong> <span id="phyMarks"></span></p>
+            <p><strong>Computer Science:</strong> <span id="compMarks"></span></p>
+            <p><strong>Mathematics:</strong> <span id="mathMarks"></span></p>
+            <h3>Total Marks: <span id="totalMarks"></span></h3>
+            <h3>Percentage: <span id="percentage"></span>%</h3>
+            <button onclick="printMarkSheet()">Print Mark Sheet</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
